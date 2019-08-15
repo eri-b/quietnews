@@ -1,0 +1,29 @@
+html{
+	
+}
+
+.timeline-Tweet-text{
+	font-size:12px !important;
+	font-family:sans-serif !important;
+	color:#777 !important;
+}
+
+.timeline-Tweet-text a{color:black;}
+
+
+.TweetAuthor-decoratedName{
+	/*color:#777 !important; */
+	font-weight:400 !important;
+	font-size:13px !important;
+}
+
+.Avatar.Avatar--edge{display: none !important;}
+
+.TweetAuthor-screenName.Identity-screenName{display:none !important;}
+
+.timeline-Tweet-actions{display:none !important;}
+
+.timeline-Tweet-brand.u-floatRight{display:none !important;}
+
+.timeline-Tweet:hover{background-color:inherit !important;}
+.MediaCard-mediaContainer, .SummaryCard-image, .u-block .tcu-imageWrapper{display:none !important;}
