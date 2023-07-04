@@ -10,7 +10,16 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/png" href="news.png"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+	<script>
+	
+		function wrapStories(){
+			$(".headlines h4.feed-item-title").each(function(index) {
+				$(this).next("p.feed-item-desc").andSelf().wrapAll("<div class='story' />")
+			});
+		}
+		
+	</script>
+		
 	<style>
 
 	*{box-sizing:border-box;}
@@ -87,6 +96,22 @@
 		transition:.5s;
 		opacity:1;
 	}
+	.news-links{
+		padding: 20px;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
+
+	.feed-item-title{
+		margin-top:60px;
+	}
+
+	.feed-item-desc{
+		margin-bottom: 60px;
+	}
+
+	h3 img{
+		max-width: 100%;;
+	}
 
 	.ready #intro{opacity:0;}
 	@media (max-width: 900px){
@@ -133,18 +158,17 @@
 </div>
 
 <div class="twCtn content">
-	<a class="twitter-timeline" href="https://twitter.com/00a01a/lists/news-aggregate?ref_src=twsrc%5Etfw" data-chrome="nofooter noheader transparent noborders"></a>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<div class="news-links">
+		<div class="headlines">
+			<h3 class="feed-title2"><img src="https://i.imgur.com/AvTHeSL.png" /></h3>
+			<hr>
+			<script src="https://www.hungrybutforwhat.com/rss/?url=http%3A%2F%2Frss.nytimes.com%2Fservices%2Fxml%2Frss%2Fnyt%2FHomePage.xml&showicon=false&showempty=true&type=js" onload="wrapStories"></script>
+		</div>
+		
+	</div>
+
 </div>
 
-<script src="customtw.js" type="text/javascript"></script>
-
-<script>
-var options = {
-    "url": "my-styles.css"
-};
-CustomizeTwitterWidget(options);
-</script>
 
 <script src="randomContent.js" type="text/javascript"></script>
 
